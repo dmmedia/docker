@@ -1,0 +1,8 @@
+services:
+    asterisk13:
+        privileged: true	# --privileged
+        tty: true			# -t
+        stdin_open: true	# -i
+        volumes:
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        image: local/c7-systemd-asterisk13
